@@ -28,6 +28,7 @@ main {
     margin: var(--space-large);
     max-width: 1512px; 
     width: 100%;
+    margin-top: var(--space-large);
 }
 
 .two-column {
