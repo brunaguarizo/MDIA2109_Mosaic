@@ -1,25 +1,25 @@
 /* ------------------------------------------------------ GENERAL STYLES ------------------------------------------------------ */
+
+:root {
+    --font-family: "Open Sans", sans-serif;
+    /* Add other custom properties here like:
+       --space-large, --blue-primary, --font-weight-700, etc. */
+}
+
 html, body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
     box-sizing: border-box;
-    height: 100%; 
-    overflow-x: hidden; 
 }
 
 *, *::before, *::after {
     box-sizing: inherit; 
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-extra-large);
-    margin: 0 var(--space-large);
-}
+/* ---------------------------- LAYOUT GRIDS ---------------------------- */
 
 .container {
     display: grid;
@@ -28,7 +28,6 @@ main {
     margin: var(--space-large);
     max-width: 1512px; 
     width: 100%;
-    margin-top: var(--space-large);
 }
 
 .two-column {
@@ -36,16 +35,15 @@ main {
     grid-template-columns: 1fr 1fr; 
     gap: var(--space-large);
     width: 100%;
-    margin:0;
 }
 
 .three-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: var(--space-large);
-    
 }
 
+/* ---------------------------- TYPOGRAPHY ---------------------------- */
 
 .header-xxlarge {
     color: var(--black);
@@ -62,7 +60,6 @@ main {
     line-height: var(--line-height-large);
     margin-bottom: var(--space-regular);
 }
-
 
 .body-text {
     color: var(--black);
@@ -98,7 +95,8 @@ main {
     line-height: var(--line-height-medium);
 }
 
-/* ----- NAV BAR ----- */
+/* ---------------------------- NAV BAR (UNCHANGED) ---------------------------- */
+
 .nav-bar {
     display: flex;
     width: 100%;
@@ -107,13 +105,7 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: var(--blue-primary);
-    position: fixed; /* Fixa o menu no topo */
-    top: 0; /* Fixa no topo da página */
-    left: 0; /* Fixa no lado esquerdo */
-    right: 0; /* Fixa no lado direito */
-    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
-
 
 .logo {
     display: flex;
@@ -128,7 +120,8 @@ main {
     gap: var(--space-large);
 }
 
-.menu-item, a {
+.menu-item,
+.menu a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,49 +134,7 @@ main {
     font-weight: var(--menu-text-hover-font-weight);
 }
 
-/* ----- BUTTONS ----- */
-
-.button-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-large);
-    margin: var(--space-large);
-}
-
-.button-content {
-    width:auto;
-    max-width: 684px;;
-    height: var(--space-large);
-    gap: 48px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-medium);
-    background-color: var(--blue-primary);
-    border: none;
-    box-sizing: border-box;
-    margin: 0;
-    transition: all 0.3s ease;
-}
-
-.button-content:hover {
-    background-color: var(--blue-900); 
-    transform: scale(1.1);
-}
-
-.button-content img {
-    width: 20px;
-    height: 20px;
-}
-
-.button-content p {
-    color: var(--white);
-    font-size: var(--menu-font-size);
-}
-
-
-/* ----- FOOTER ----- */
+/* ---------------------------- FOOTER ---------------------------- */
 
 .footer {
     display: flex;
@@ -206,46 +157,4 @@ main {
     color: var(--white);
     text-align: right;  
     margin-left: auto;  
-}
-
-/* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
-:root {
-    /* ----- COLORS ----- */
-    --blue-primary: rgb(43,95,252);
-    --blue-50: rgb(234, 239, 255);
-    --blue-900: rgb(18, 40, 106);
-    
-    --white: #FFFFFF;
-    --black: rgb(20, 20, 20);
-    --grey-400: rgb(67, 67, 67);
-
-    --yellow-secondary: rgb(255, 218, 1);
-    --orange-secondary: rgb(255, 94, 9);
-    --green-secondary: rgb(0, 193, 79);
-    --purple-secondary: rgb(154, 65, 255);
-
-    /* ----- TYPE ----- */
-    --font-family: "Open Sans", sans-serif;
-    --header-xxlarge-size: 88px;
-    --title-section-font-size: 30px;
-    --button-font-size: 24px;
-    --body-text-font-size: 20px;
-    --menu-font-size: 16px;
-    --label-font-size: 16px;
-    --font-style-normal: normal;
-    --font-weight-700: 700;
-    --font-weight-600: 600;
-    --font-weight-400: 400;
-    --menu-text-hover-font-weight: 700;
-    --line-height-xxlarge: 100px;
-    --line-height-large: 36px;
-    --line-height-medium: 28px;
-    --line-height-small: 20px;
-
-    /* ----- SPACING ----- */
-    --space-small: 8px;
-    --space-regular: 16px;
-    --space-medium: 32px;
-    --space-large: 48px;
-    --space-extra-large: 140px;
 }

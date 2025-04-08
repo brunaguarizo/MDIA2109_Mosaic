@@ -1,0 +1,67 @@
+/* ----- HEADER ----- */
+.two-column > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.two-column > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 690px ;
+}
+
+.img-graphic {
+    width: 100%;
+    height: auto;
+    margin: 0 48px;
+}
+
+/* ----- PAGE CARDS ----- */
+.pages-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    grid-column: span 1;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-large);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    grid-column: span 1;
+    border-radius: 8px;  
+    transition: outline 0.3s ease, transform 0.3s ease; 
+}
+
+.card:hover .card-item {
+    outline: 2px solid var(--blue-primary); 
+}
+
+.card:hover {
+    transform: scale(1.05);  
+}
+
+.card-item {
+    transition: outline 0.3s ease; 
+    border-radius: 8px; 
+}
+
+.card-item:hover {
+    outline: 2px solid var(--blue-primary); 
+}
