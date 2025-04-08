@@ -1,0 +1,230 @@
+
+/* ----- BANNER HERO ----- */
+.banner-hero {
+    display: flex;
+    width: 100%;
+    max-width: 1512px; 
+    height: fit-content;
+    padding: var(--space-large);
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--blue-50);
+    margin: 0 auto; 
+    overflow: hidden; 
+    padding-top: var(--space-extra-large);
+}
+
+.image-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.text {
+    max-width: 686px;
+    margin-top: var(--space-large);
+}
+
+/* Primary Color */
+
+.Primary-Colors{
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+}
+.Primary-Color{
+    width: 100%;
+    height: 80%;
+}
+
+.Primary-Colors_row{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+}
+.Primary-Main_Shade{
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+}
+.Primary-Sub_Shades{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 10px;
+    width: 100%;
+}
+
+.Primary-Main-Shade__Content{
+    align-items: center;
+    padding-right: 8px;
+    text-align: left;
+}
+.Primary-Color__Description{
+    padding-top: var(--space-regular);
+    
+}
+
+.Secondary-Colors_row{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.color-image{
+    width: 100%; 
+}
+
+.Secondary-Shade_Content{
+ display: grid;
+ grid-template-rows: 1fr;
+ grid-template-columns: 1fr 1fr;
+ gap: 10px;
+ width: 100%;
+}
+
+.Color-Blind-section{
+    display: flex;
+    width: 100%;
+    max-width: 1512px; 
+    height: fit-content;
+    padding: var(--space-large);
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto; 
+    overflow: hidden; 
+    padding-top: var(--space-extra-large);
+
+}
+
+.Accessibility-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 10px;
+    column-gap: 10px;
+}
+.Accessibility-item{
+    background-color: var(--blue-50);
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+
+.Primary-Colors, .Secondary-Colors, .Component-Integration, .Accessibility,.UI-Application{
+    display: flex;
+    width: 100%;
+    max-width: 1512px; 
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto; 
+    padding-top: var(--space-medium);
+}
+.Component-Integration_Content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    background-color: var(--blue-50);
+    padding: 48px 10px;
+}
+.Component-Buttons-List{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap:48px;
+}
+.Component-Button-Primary{
+    grid-row: 1/2;
+    width: 70%;
+}
+.Component-Button-Outline{
+    grid-row: 1/2;
+    width: 70%;
+}
+.Component-Button-Light{
+    grid-row: 1/2;
+    width: 70%;
+}
+.Component-Button-Hover{
+    grid-row: 1/2;
+    width: 70%;
+}
+.Component-Navigation_Selection{
+    /* grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 4px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Component-Project_Card{
+    grid-template-rows: 1/2;
+    margin:auto 0px;
+}
+.Component-Project_Chips{
+    grid-row: 2/3;
+    margin:auto 0px;
+}
+.Component-Project_Nav_Bar_Dark{
+    grid-row: 3/4;
+    margin:auto 0px;
+}
+.Component-Project_Nav_Bar_Light{
+    grid-row: 4/5;
+    margin:auto 0px;
+}
+.Component-Cards{
+    grid-column: 3/4;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Component-Cards_Dashboard{
+    /* grid-row: 1/2;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    padding: auto 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Component-Cards_Overview{
+    /* grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.UI-Application_Screens{
+    padding: 16px 48px;
+    width: 100%;
+    background-color: var(--blue-50);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin: 0 auto;
+}
+.Image-link{
+    color: var(--black);
+    font-size: var(--body-text-font-size);
+    font-weight: var(--font-weight-400);
+    line-height: var(--line-height-medium);
+    margin-top: 0;
+    text-align: left;
+    text-decoration: underline;
+}

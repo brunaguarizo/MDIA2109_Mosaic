@@ -1,0 +1,174 @@
+/* ----- HEADER ----- */
+.two-column > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.two-column > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 690px;
+    margin-top: var(--space-large);
+}
+
+.img-graphic {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+/* ----- PAGE CARDS ----- */
+.pages-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    grid-column: span 1;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-large);
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    grid-column: span 1;
+    border-radius: 8px;
+    transition: outline 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .card-item {
+    outline: 2px solid var(--blue-primary);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-item {
+    transition: outline 0.3s ease;
+    border-radius: 8px;
+}
+
+.card-item:hover {
+    outline: 2px solid var(--blue-primary);
+}
+
+/* ----- NAV BAR ----- */
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 var(--space-large);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-large);
+}
+
+/* ----- BUTTONS ----- */
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-large);
+    margin: var(--space-large);
+}
+
+.button-content {
+    width: auto;
+    max-width: 684px;
+    height: var(--space-large);
+    gap: 48px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-medium);
+    background-color: var(--blue-primary);
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.button-content:hover {
+    background-color: var(--blue-900);
+    transform: scale(1.1);
+}
+
+.button-content img {
+    width: 20px;
+    height: 20px;
+}
+
+.button-content p {
+    color: var(--white);
+    font-size: var(--menu-font-size);
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 var(--space-large);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-900);
+}
+
+.footer .two-column {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-text {
+    color: var(--white);
+    text-align: right;
+    margin-left: auto;
+}
+
+/* ----- HEADER TEXT STYLES ----- */
+.header-xxlarge {
+    color: var(--black);
+    font-size: var(--header-xxlarge-size);
+    font-weight: var(--font-weight-700);
+    line-height: var(--line-height-xxlarge);
+    margin-bottom: var(--space-medium);
+}
+
+.title-section {
+    color: var(--black);
+    font-size: var(--title-section-font-size);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-large);
+    margin-bottom: var(--space-regular);
+}
