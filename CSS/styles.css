@@ -26,13 +26,13 @@ html {
     margin: var(--space-large);
     max-width: 1512px; 
     width: 100%;
+    box-sizing: border-box; 
 }
 
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: var(--space-large);
-    width: 100%;
 }
 
 .three-column {
@@ -41,6 +41,20 @@ html {
     gap: var(--space-large);
 }
 
+.four-column {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+    align-items: center;
+    max-width: 1512px;
+    box-sizing: border-box;
+}
+
+.two-column-styled {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: var(--space-large);
+    align-items: center;
+}
 
 .header-xxlarge {
     color: var(--black);
@@ -53,7 +67,7 @@ html {
 .title-section {
     color: var(--black);
     font-size: var(--title-section-font-size);
-    font-weight: var(--font-weight-600);
+    font-weight: var(--font-weight-700);
     line-height: var(--line-height-large);
     margin-bottom: var(--space-regular);
     text-decoration: none;
