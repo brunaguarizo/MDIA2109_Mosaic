@@ -1,11 +1,11 @@
 /* ------------------------------------------------------ GENERAL STYLES ------------------------------------------------------ */
 html, body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
     box-sizing: border-box;
-    height: 100%; 
 }
 
 *, *::before, *::after {
@@ -14,19 +14,21 @@ html, body {
 
 html {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-extra-large);
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-large); 
-    margin: var(--space-large);
-    max-width: 1512px; 
     width: 100%;
-    box-sizing: border-box; 
+    max-width: 1512px; 
+    box-sizing: border-box;
+    margin: 0 auto;  
+    padding: 0 var(--space-large); 
+    overflow: hidden;  
 }
 
 .two-column {
@@ -134,20 +136,19 @@ html {
 /* ----- BUTTONS ----- */
 .button-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: var(--space-large);
-    margin: var(--space-large) auto;
-    width: 100%; 
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large); 
+    width: 100%;
+    box-sizing: border-box;
+    margin: var(--space-large) auto;  
+    padding: 0 var(--space-large); 
+    overflow: hidden;  
+    max-width: 1512px; 
 }
 
 .button-content {
-    width: 100%; 
-    max-width: none; 
-    height: var(--space-large);
-    gap: 48px;
-    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: var(--space-medium);
     background-color: var(--blue-primary);
@@ -156,6 +157,9 @@ html {
     margin: 0;
     transition: all 0.3s ease;
     text-decoration: none;
+    border-radius: 8px;
+    height: var(--space-large);  
+    flex: 1 1 calc(50% - 24px);  
 }
 
 .button-content:hover {
@@ -172,6 +176,7 @@ html {
     color: var(--white);
     font-size: var(--menu-font-size);
 }
+
 
 /* ----- FOOTER ----- */
 .footer {
