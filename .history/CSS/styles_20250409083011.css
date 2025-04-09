@@ -40,7 +40,7 @@ html {
 .three-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    gap: auto;
+    gap: var(--space-regular);
 }
 
 .four-column {
